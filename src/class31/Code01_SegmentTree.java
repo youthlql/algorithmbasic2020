@@ -26,7 +26,7 @@ public class Code01_SegmentTree {
 			change = new int[MAXN << 2]; // 用来支持脑补概念中，某一个范围有没有更新操作的任务
 			update = new boolean[MAXN << 2]; // 用来支持脑补概念中，某一个范围更新任务，更新成了什么
 		}
-
+		//rt << 1 = 2*rt   rt << 1 | 1=2*rt+1
 		private void pushUp(int rt) {
 			sum[rt] = sum[rt << 1] + sum[rt << 1 | 1];
 		}

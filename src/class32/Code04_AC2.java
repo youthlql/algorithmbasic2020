@@ -89,6 +89,11 @@ public class Code04_AC2 {
 				// 1) 现在来到的路径，是可以继续匹配的
 				// 2) 现在来到的节点，就是前缀树的根节点
 				cur = cur.nexts[index] != null ? cur.nexts[index] : root;
+
+				//这里cur=root感觉有点多余了
+//              if(cur.nexts[index] != null){
+//					cur = cur.nexts[index];
+//				}
 				follow = cur;
 				while (follow != root) {
 					if (follow.endUse) {
