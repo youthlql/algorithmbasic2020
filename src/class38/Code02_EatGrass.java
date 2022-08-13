@@ -14,7 +14,7 @@ public class Code02_EatGrass {
 			if (whoWin(n - want).equals("后手")) {
 				return "先手";
 			}
-			if (want <= (n / 4)) {
+			if (want <= (n / 4)) {//防止溢出
 				want *= 4;
 			} else {
 				break;
